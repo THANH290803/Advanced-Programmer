@@ -1,4 +1,4 @@
-package Day2.BT3;
+package Day2.On_Lai_Bai_Cu.BT3;
 
 public class HinhThangCan {
     private double dayLon;

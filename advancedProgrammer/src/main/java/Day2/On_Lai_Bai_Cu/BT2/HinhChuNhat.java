@@ -1,4 +1,4 @@
-package Day2.BT2;
+package Day2.On_Lai_Bai_Cu.BT2;
 
 public class HinhChuNhat {
     private double chieuDai = 1.0;
