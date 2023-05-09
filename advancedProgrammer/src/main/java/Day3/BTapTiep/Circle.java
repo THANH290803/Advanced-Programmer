@@ -22,6 +22,9 @@ public class Circle {
     }
 
     public void setRadius(double radius) {
+        if (radius <= 0){
+            throw new RuntimeException("Nhap so duong");
+        }
         this.radius = radius;
     }
 
@@ -39,9 +42,9 @@ public class Circle {
 
     @Override
     public String toString() {
-        return "Circle{" +
+        return "Circle[" +
                 "radius=" + radius +
                 ", color='" + color + '\'' +
-                '}';
+                ']';
     }
 }

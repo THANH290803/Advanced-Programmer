@@ -24,6 +24,10 @@ public class Cylinder extends Circle{
         return height;
     }
 
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
     // A public method for computing the volume of cylinder
     //  use superclass method getArea() to get the base area
     public double getVolume() {
