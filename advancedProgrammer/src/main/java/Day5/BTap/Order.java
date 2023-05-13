@@ -1,31 +1,31 @@
 package Day5.BTap;
 
 public class Order {
-    static class Builder{
-        private boolean traDa;
+    static class Builder {
+        private int traDa;
 
         private int banhMyThapCam20k;
 
-        private boolean pho;
+        private int pho;
 
-        private boolean bun;
+        private int bun;
 
-        private boolean coca;
+        private int coca;
 
-        private boolean cafe;
+        private int cafe;
 
-        private boolean xoi;
+        private int xoi;
 
-        private boolean kem;
+        private int kem;
 
-        private boolean traSua;
+        private int traSua;
 
-        private boolean chao;
+        private int chao;
 
         public Builder() {
         }
 
-        public Builder setTraDa(boolean traDa) {
+        public Builder setTraDa(int traDa) {
             this.traDa = traDa;
             return this;
         }
@@ -35,72 +35,72 @@ public class Order {
             return this;
         }
 
-        public Builder setPho(boolean pho) {
+        public Builder setPho(int pho) {
             this.pho = pho;
             return this;
         }
 
-        public Builder setBun(boolean bun) {
+        public Builder setBun(int bun) {
             this.bun = bun;
             return this;
         }
 
-        public Builder setCoca(boolean coca) {
+        public Builder setCoca(int coca) {
             this.coca = coca;
             return this;
         }
 
-        public Builder setCafe(boolean cafe) {
+        public Builder setCafe(int cafe) {
             this.cafe = cafe;
             return this;
         }
 
-        public Builder setXoi(boolean xoi) {
+        public Builder setXoi(int xoi) {
             this.xoi = xoi;
             return this;
         }
 
-        public Builder setKem(boolean kem) {
+        public Builder setKem(int kem) {
             this.kem = kem;
             return this;
         }
 
-        public Builder setTraSua(boolean traSua) {
+        public Builder setTraSua(int traSua) {
             this.traSua = traSua;
             return this;
         }
 
-        public Builder setChao(boolean chao) {
+        public Builder setChao(int chao) {
             this.chao = chao;
             return this;
         }
 
-        public Order create(){
+        public Order create() {
             return new Order(traDa, banhMyThapCam20k, pho, bun, coca, cafe, xoi, kem, traSua, chao);
         }
     }
 
-    private boolean traDa;
+    private int traDa;
 
     private int banhMyThapCam20k;
 
-    private boolean pho;
+    private int pho;
 
-    private boolean bun;
+    private int bun;
 
-    private boolean coca;
+    private int coca;
 
-    private boolean cafe;
+    private int cafe;
 
-    private boolean xoi;
+    private int xoi;
 
-    private boolean kem;
+    private int kem;
 
-    private boolean traSua;
+    private int traSua;
 
-    private boolean chao;
+    private int chao;
 
-    private Order(boolean traDa, int banhMyThapCam20k, boolean pho, boolean bun, boolean coca, boolean cafe, boolean xoi, boolean kem, boolean traSua, boolean chao) {
+    private Order(int traDa, int banhMyThapCam20k, int pho, int bun, int coca, int cafe, int xoi, int kem, int traSua, int chao) {
         this.traDa = traDa;
         this.banhMyThapCam20k = banhMyThapCam20k;
         this.pho = pho;
@@ -113,11 +113,11 @@ public class Order {
         this.chao = chao;
     }
 
-    public boolean isTraDa() {
+    public int isTraDa() {
         return traDa;
     }
 
-    public void setTraDa(boolean traDa) {
+    public void setTraDa(int traDa) {
         this.traDa = traDa;
     }
 
@@ -129,83 +129,103 @@ public class Order {
         this.banhMyThapCam20k = banhMyThapCam20k;
     }
 
-    public boolean isPho() {
+    public int isPho() {
         return pho;
     }
 
-    public void setPho(boolean pho) {
+    public void setPho(int pho) {
         this.pho = pho;
     }
 
-    public boolean isBun() {
+    public int isBun() {
         return bun;
     }
 
-    public void setBun(boolean bun) {
+    public void setBun(int bun) {
         this.bun = bun;
     }
 
-    public boolean isCoca() {
+    public int isCoca() {
         return coca;
     }
 
-    public void setCoca(boolean coca) {
+    public void setCoca(int coca) {
         this.coca = coca;
     }
 
-    public boolean isCafe() {
+    public int isCafe() {
         return cafe;
     }
 
-    public void setCafe(boolean cafe) {
+    public void setCafe(int cafe) {
         this.cafe = cafe;
     }
 
-    public boolean isXoi() {
+    public int isXoi() {
         return xoi;
     }
 
-    public void setXoi(boolean xoi) {
+    public void setXoi(int xoi) {
         this.xoi = xoi;
     }
 
-    public boolean isKem() {
+    public int isKem() {
         return kem;
     }
 
-    public void setKem(boolean kem) {
+    public void setKem(int kem) {
         this.kem = kem;
     }
 
-    public boolean isTraSua() {
+    public int isTraSua() {
         return traSua;
     }
 
-    public void setTraSua(boolean traSua) {
+    public void setTraSua(int traSua) {
         this.traSua = traSua;
     }
 
-    public boolean isChao() {
+    public int isChao() {
         return chao;
     }
 
-    public void setChao(boolean chao) {
+    public void setChao(int chao) {
         this.chao = chao;
     }
 
-    @Override
-    public String toString() {
-        return "Order[" +
-                "traDa=" + traDa +
-                ", banhMyThapCam20k=" + banhMyThapCam20k +
-                ", pho=" + pho +
-                ", bun=" + bun +
-                ", coca=" + coca +
-                ", cafe=" + cafe +
-                ", xoi=" + xoi +
-                ", kem=" + kem +
-                ", traSua=" + traSua +
-                ", chao=" + chao +
-                ']';
+    public void printOrder() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("---- D05K13 Store ----\n");
+        if (traDa > 0) {
+            sb.append("Tra da: " + traDa + "\n");
+        }
+        if (banhMyThapCam20k > 0) {
+            sb.append("Banh mi 20k: " + banhMyThapCam20k + "\n");
+        }
+        if (pho > 0) {
+            sb.append("Pho: " + pho + "\n");
+        }
+        if (bun > 0) {
+            sb.append("Bun: " + bun + "\n");
+        }
+        if (coca > 0) {
+            sb.append("Co ca: " + coca + "\n");
+        }
+        if (cafe > 0) {
+            sb.append("Caphe: " + cafe + "\n");
+        }
+        if (xoi > 0) {
+            sb.append("Xoi: " + xoi + "\n");
+        }
+        if (kem > 0) {
+            sb.append("Kem: " + kem + "\n");
+        }
+        if (traSua > 0) {
+            sb.append("Tra sua: " + traSua + "\n");
+        }
+        if (chao > 0) {
+            sb.append("Chao: " + chao + "\n");
+        }
+        System.out.println(sb.toString());
     }
 }
