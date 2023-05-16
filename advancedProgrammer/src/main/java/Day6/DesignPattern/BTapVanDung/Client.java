@@ -7,12 +7,12 @@ public class Client {
         CreditCard card = CardFactory.getCard("Titanium");
 
         if (card != null){
-            System.out.println(card.getCartType());
+            System.out.println("Cart Type: " + card.getCartType());
             DecimalFormat decimalFormat = new DecimalFormat("###,###.###");
             int creditLimit = card.getCreditLimit();
             int annualCharge = card.getAnnualCharge();
-            System.out.println(decimalFormat.format(creditLimit));
-            System.out.println(decimalFormat.format(annualCharge));
+            System.out.println("Credit Limit: " + decimalFormat.format(creditLimit));
+            System.out.println("Annual Charge: " + decimalFormat.format(annualCharge));
         }
     }
 }
