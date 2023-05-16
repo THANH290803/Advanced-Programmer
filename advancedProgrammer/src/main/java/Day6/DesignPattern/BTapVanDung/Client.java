@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 public class Client {
     public static void main(String[] args) {
-        CreditCard card = CardFactory.getCard("Titanium");
+        CreditCard card = CardFactory.getCard(CardType.PLATINUM);
 
         if (card != null){
             System.out.println("Cart Type: " + card.getCartType());

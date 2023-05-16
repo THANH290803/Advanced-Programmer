@@ -4,13 +4,13 @@ public class CardFactory {
 
     private CardFactory(){};
 
-    public static CreditCard getCard(String card){
+    public static CreditCard getCard(CardType card){
         switch (card){
-            case "MoneyBack":
+            case MONEY_BACK:
                 return new MoneyBack();
-            case "Platinum":
+            case PLATINUM:
                 return new Platinum();
-            case "Titanium":
+            case TITANIUM:
                 return new Titanium();
             default:
                 return null;
