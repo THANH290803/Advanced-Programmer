@@ -1,0 +1,13 @@
+package Day6.DesignPattern.FactoryMethod;
+
+public class Viettinbank implements Bank{
+    @Override
+    public String getBankName() {
+        return "Viettinbank";
+    }
+
+    @Override
+    public void payment() {
+        System.out.println("Trien khai rieng cua Vietinbank");
+    }
+}
